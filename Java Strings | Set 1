@@ -1,0 +1,9 @@
+class Solution {
+    static String conRevstr(String S1, String S2) {
+        // code here
+        String S=S1+S2;
+        StringBuilder sb= new StringBuilder(S);
+        sb.reverse();
+        return sb.toString();
+    }
+}
