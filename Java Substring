@@ -1,0 +1,10 @@
+class Solution {
+    static String javaSub(String S, int L, int R) {
+        // code here
+         String res="";
+        for(int i=L; i<=R; i++){
+            res+=S.charAt(i);
+        }
+        return res.toString();
+    }
+}
