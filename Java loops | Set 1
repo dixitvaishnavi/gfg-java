@@ -1,0 +1,21 @@
+class Solution{
+    static ArrayList<Integer> getSum(int N){
+        // code here
+           int evenSum=0;
+       int oddSum=0;
+       for(int i=2;i<=N;i+=2){
+           evenSum=evenSum+i;
+       }
+       
+       for(int i=1;i<=N;i+=2){
+           oddSum=oddSum+i;
+       }
+       
+       ArrayList<Integer> numbers=new ArrayList<>();
+       
+       numbers.add(evenSum);
+       numbers.add(oddSum);
+       return numbers;
+
+    }
+}
