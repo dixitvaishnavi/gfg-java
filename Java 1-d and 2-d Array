@@ -1,0 +1,29 @@
+class Complete
+{
+    public static ArrayList<Integer> array(int a[][], int b[], int n)
+    {
+        // Complete the function
+        ArrayList<Integer> res = new ArrayList<>();
+        
+        int leftDiagonal = 0;
+        for(int i = 0; i < n; i++)
+        {
+            leftDiagonal += a[i][i];
+        }
+        
+        int maxElement = b[0];
+        for(int i = 1; i < n; i++)
+        {
+            if(b[i] > maxElement)
+            {
+                maxElement = b[i];
+            }
+        }
+        
+        res.add(leftDiagonal);
+        res.add(maxElement);
+        
+        return res;
+
+    }
+}
