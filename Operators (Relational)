@@ -1,0 +1,21 @@
+class Solution{
+    static String compareNum(int A, int B){
+        // code here
+        String str="";
+      String a=Integer.toString(A);
+      String b = Integer.toString(B);
+      if(A<B){
+          str=a+ " is less than "+ b;
+      }
+      else if(A==B){
+          str = a + " is equals to " +b;
+      }
+      else{
+          str = a + " is greater than "+b;
+      }
+      
+     return str;
+
+
+    }
+}
