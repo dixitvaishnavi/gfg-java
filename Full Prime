@@ -1,0 +1,29 @@
+class Solution{
+	static int fullPrime(int n){
+	    //code here
+	    if(prime(n) == 0)
+return 0;
+while(n != 0)
+{
+int i = n%10;
+if(prime(i)==0)
+return 0;
+n = n/10;
+}
+return 1;
+}
+
+static int prime(int N){
+if(N == 0)
+return 0;
+if(N == 1 || N == 2)
+return N-1;
+for(int i = 2; i * i <= N; i ++)
+{
+if(N % i == 0)
+return 0;
+}
+return 1;
+
+	}
+}
