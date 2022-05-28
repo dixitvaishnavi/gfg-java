@@ -1,0 +1,27 @@
+class Solution {
+    static long isSumPalindrome(long n){
+        // code here
+        for(int i=0; i <=5; i++){
+if(isPalindrome(n))
+return n;
+else
+n+= getReversedNumber(n);
+}
+return -1;
+}
+
+static boolean isPalindrome (long n) {
+return (getReversedNumber (n) == n);
+}
+
+static long getReversedNumber (long n){
+long reversedNumber = 0;
+while (n > 0){
+reversedNumber = (reversedNumber*10) + (n%10);
+n /=10;
+}
+return reversedNumber;
+
+        
+    }
+}
