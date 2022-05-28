@@ -1,0 +1,41 @@
+class Solution {
+    
+      static boolean isPrime(int n){
+       if(n==1){
+           return false;
+       }
+       for(int i=2;i*i<=n;i++){
+           if(n%i==0){
+               return false;
+           }
+       }
+       return true;
+      }
+       static boolean isPalindrome(int n){
+       int tmp=n;
+       int r=0;
+       while(tmp>0){
+           r=(r*10)+(tmp%10);
+           tmp /=10;
+       }
+       if(r==n){
+           return true;
+       }
+       return false;
+   }
+
+
+    static Long getPPS(int a, int b) {
+        // code here
+       
+        long sum=0;
+       for(int i=a;i<=b;i++){
+           if(isPrime(i) && isPalindrome(i)){
+               sum +=i;
+           }
+       }
+       return sum;
+
+ 
+    }
+};
