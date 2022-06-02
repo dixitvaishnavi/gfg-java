@@ -1,0 +1,21 @@
+class GfG
+{
+    void printPat(int n)
+    {
+         // Your code here
+           int t=0;
+        for(int a=n;a>0;a--)
+        {
+           for(int c=n;c>0;c--)
+           {
+               t=0;
+               while(t<a)
+               {
+                   System.out.print(c+" ");
+                   t++;
+               }
+           }
+           System.out.print("$");
+}
+    }
+}
