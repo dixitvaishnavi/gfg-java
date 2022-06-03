@@ -1,0 +1,26 @@
+class  Solution
+{
+    void shuffleArray(long arr[], int n)
+    {
+        // Your code goes here
+                long[] ans=new long[n];
+        getans(arr,0,n/2,ans,0);
+        for (int i = 0; i < ans.length; i++) {
+            arr[i] = ans[i];
+        }
+    }
+    public static void getans(long[] arr,int a,int b,long[] ans,int idx){
+       if(idx==arr.length){
+           return;
+       }
+       if(idx%2==0){
+           ans[idx]=arr[a];
+           a++;
+       }else{
+           ans[idx]=arr[b];
+           b++;
+       }
+       getans(arr,a,b,ans,idx+1);
+
+    }
+}
