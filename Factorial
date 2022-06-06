@@ -1,0 +1,11 @@
+class Solution{
+    static long factorial(int N){
+        // code here
+        if(N==1 || N==0)
+        return 1;
+        
+        long reCall=factorial(N-1);
+        long smallCal=N*reCall;
+        return smallCal;
+    }
+}
