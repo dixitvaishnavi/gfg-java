@@ -1,0 +1,18 @@
+class Solution {
+    static long commDiv(long a, long b){
+        // code here
+         int min = Math.min((int)a,(int)b);
+       long count =0;
+       
+       for(int i=1;i<=min;i++)
+       {
+           if((int)a%i==0 && (int)b%i==0)
+           {
+               count++;
+           }
+       }
+       
+       return count;
+
+    }
+}
