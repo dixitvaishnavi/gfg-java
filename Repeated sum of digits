@@ -1,0 +1,11 @@
+class Solution{
+    static int repeatedSumOfDigits(int N){
+        // code here
+               if(N<10)
+               {
+           return N;
+       }
+       return repeatedSumOfDigits((N%10)+N/10);
+
+    }
+}
