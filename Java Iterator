@@ -1,0 +1,16 @@
+class Solution {
+    static ArrayList<Integer> javaIterator(int n, int k, int[] arr) {
+        // code here
+        ArrayList<Integer> arrr=new ArrayList<>();
+        for(int i=0;i<n;i++)
+        {
+            if(arr[i]>=k)
+            {
+                arrr.add(arr[i]);
+            }
+        }
+        Collections.sort(arrr);
+        return arrr;
+
+    }
+};
