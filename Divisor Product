@@ -1,0 +1,29 @@
+class Solution {
+    static Long divisorProduct(Long N) {
+        // code here
+        long modulo =1000000007;   //given
+       long product=1;
+
+      
+      for(int i=1;i<=Math.sqrt(N);i++)
+      {  
+      
+          if(N%i==0)
+          {
+              
+              if(N/i==i)
+              {
+               product = (product*i)%modulo;  //now in limit 10^9
+            }
+            else{
+                product = (product*i)%modulo;
+                product = (product*N/i)%modulo; // multiply twice for output
+            }
+          }
+      }
+      
+       return product;
+
+
+    }
+};
