@@ -1,0 +1,21 @@
+class Solution
+{
+    public int minimum_difference(int[] nums)
+    {
+        // code here
+          int min=0;
+       int d =Integer.MAX_VALUE;
+       Arrays.sort(nums);
+       for(int i=0;i<nums.length-1;i++)
+       {
+           min=nums[i+1]-nums[i];
+           if(min<d)
+           {
+               d=min;
+           }
+       }
+       return d;
+
+
+    }
+}
