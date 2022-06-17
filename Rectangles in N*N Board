@@ -1,0 +1,7 @@
+class Solution {
+    static Long rectanglesInChessBoard(Long N) {
+        // code here
+        return (N*N*(N+1)*(N+1)/4) - (N*(N+1)*(2*N+1)/6);
+
+    }
+};
