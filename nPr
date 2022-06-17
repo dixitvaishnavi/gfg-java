@@ -1,0 +1,19 @@
+class Solution{
+    static long factorial(long n){
+       long sum = 1;
+       for(int i = 1; i<=n; i++)
+       {
+           sum = sum*i;
+       }
+       return sum;
+   }
+
+    static long nPr(long n, long r){
+        // code here
+        long N = factorial(n);
+       long P = factorial(n-r);
+       return N/P;
+
+        
+    }
+}
