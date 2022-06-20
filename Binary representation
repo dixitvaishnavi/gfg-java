@@ -1,0 +1,16 @@
+class Solution{
+    static String getBinaryRep(int N){
+        // code here
+         String str="", str2;int A=0;
+    while(N>0)
+    {
+        str=Integer.toString(N%2)+str;
+        N=N/2;
+    }
+    A=str.length();
+    str="0000000000000000000000000000000"+str;
+    str2=str.substring(A+1);
+    return(str2);
+
+    }
+}
